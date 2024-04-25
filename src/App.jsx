@@ -7,7 +7,8 @@ import Layout from './components/Layout';
 import Home from './pages/homepage/Home';
 import Login from './pages/Login';
 import Formations from './pages/Formations';
-
+import Sign from './pages/signUp';
+import MainDash from './pages/dashboard/mainDash';
 export const ThemeContext = createContext("light");
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
     }
   }, [theme]);
 
-  return (
-    <>
+  return (  
+    <>  
       <ThemeContext.Provider
         value={{
           SetTheme: setTheme,
@@ -36,8 +37,15 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
               <Route path="/signin" element={<Login />} />
+              <Route path="/register" element={<Sign />} />
+
+              <Route path="/Formations" element={<Formations />} />
+
+
 
             </Route>
+            <Route path="/dash" element={<MainDash />} />
+
           </Routes>
         </BrowserRouter>
       </ThemeContext.Provider>

@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { ChangeEvent, FormEvent, useState } from 'react';
 import axiosURL from "../axiosConfig";
 import { toast } from "sonner";
-import { GiLog } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
-import { GiPerson } from "react-icons/gi";
 
-export default function LoginForm() {
+export default function SignForm() {
     const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
 
     const [formData, setFormData] = useState({
-        email: '',
+        username: '',
+         email: '',
+         accountType: '',
         password: '',
     });
     const [errors, setErrors] = useState({
@@ -23,6 +23,8 @@ export default function LoginForm() {
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
         setErrors({
+            username:'',
+            accountType: '',
             email: "",
             password: "",
         });
@@ -30,6 +32,8 @@ export default function LoginForm() {
 
     const validate = () => {
         const errors = {
+            username:"",
+            accountType:"",
             email: "",
             password: ""
         }
@@ -63,6 +67,8 @@ export default function LoginForm() {
                 if (data?.data) {
                     toast.success(data?.message || "bienvenue à vous ✨!");
                     setFormData({
+                        username:"",
+                        accountType:"",
                         email: '',
                         password: '',
                     });
@@ -77,9 +83,17 @@ export default function LoginForm() {
 
     return (
         <form className="space-y-4 md:space-y-6 border-2 border-transparent dark:border-secondary/50 dark:bg-white bg-tertiary p-5 sm:p-10 max-w-xs rounded-xl sm:max-w-lg" onSubmit={handleSubmit}>
-          <div className="text-white text-xl">
-          <GiLog /> 
-            </div>  
+           <div>
+                <label htmlFor="username" className="block mb-2 text-sm font-bold text-white">Votre nom utilisateur*</label>
+                <input
+                    onChange={handleChange}
+                    type="email"
+                    name="username"
+                    placeholder="username*"
+                    className={`${errors.email && "!border-red-500"} bg-gray-50 dark:bg-transparent dark:border border-secondary/40 focus:border-secondary outline-none text-white sm:text-sm rounded-lg block w-full p-2.5`}
+                />
+                <span className="text-red-500 text-sm">{errors.email && errors.email}</span>
+            </div>
             <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-bold text-white">Votre email*</label>
                 <input
@@ -89,6 +103,21 @@ export default function LoginForm() {
                     placeholder="Email*"
                     className={`${errors.email && "!border-red-500"} bg-gray-50 dark:bg-transparent dark:border border-secondary/40 focus:border-secondary outline-none text-white sm:text-sm rounded-lg block w-full p-2.5`}
                 />
+                <span className="text-red-500 text-sm">{errors.email && errors.email}</span>
+            </div>
+            
+            <div className="flex gap-5">
+            <label htmlFor="account" className="block mb-2 text-sm font-bold text-white">Votre type d'email*</label>
+
+               <select name="" id="" className="rounded-md text-gray-500 text-sm text-center px-2 ">
+                
+                <option value="">client</option>
+                <option value="">agence</option>
+                <option value="">Travailleur</option>
+
+
+               </select>        
+
                 <span className="text-red-500 text-sm">{errors.email && errors.email}</span>
             </div>
             <div>
@@ -116,16 +145,13 @@ export default function LoginForm() {
                 {isLoading ? <>
                     Chargement <BiLoaderCircle className="animate-spin text-xl ml-1" />
                 </> : <>
-                    Se connecter
+                    S'enregistrer
                 </>}
             </button>
             {/* <p className="text-sm font-light text-gray-500 text-center border-t-2 pt-6 border-gray-500">
                 Je suis nouveau, je veux {" "}
                 <NavLink to="/register" className="text-secondary font-semibold hover:underline">créer un compte pour mon restaurant.</NavLink>
             </p> */}
-            <NavLink to='/register' className="text-sm mt-5 text-gray-500">
-                    J’ai deja un <a href="#" className="text-secondary font-medium hover:underline">compte</a>
-                </NavLink>
         </form>
     )
 }

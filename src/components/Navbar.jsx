@@ -3,9 +3,10 @@ import { BiStoreAlt } from "react-icons/bi";
 import { BiBook } from "react-icons/bi";
 import { BiHomeAlt } from "react-icons/bi";
 import { createElement } from "react";
-
+import { TbPhoneCall } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import { TbLogin } from "react-icons/tb";
+import { TbQuestionMark } from "react-icons/tb";
 
 const Navbar = () => {
   const nav = [
@@ -18,12 +19,12 @@ const Navbar = () => {
       icon: TbLogin,
     },
     {
-      link: "/market-place",
-      icon: BiStoreAlt,
+      link: "/formations",
+      icon: TbQuestionMark,
     },
     {
       link: "/scan",
-      icon: AiOutlineScan,
+      icon: TbPhoneCall,
     },
   ];
 

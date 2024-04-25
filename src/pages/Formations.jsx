@@ -1,8 +1,8 @@
-import { MdOutlinePerson3 } from "react-icons/md";
+import { GiBoxTrap } from "react-icons/gi";
 import { MdOutlineFactory } from "react-icons/md";
-import { GiPlantRoots } from "react-icons/gi";
-import { GiCow } from "react-icons/gi";
-
+import { GiRoad } from "react-icons/gi";
+import { GiTicket } from "react-icons/gi";
+import { GiBus } from "react-icons/gi";
 import ArticleCard from "../components/ArticleCard";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,47 +26,49 @@ export default function Formations() {
                     background: `linear-gradient(
                         to bottom, 
                         rgb(0 0 0 / .6), rgb(0 0 0 / 0)
-                    ), url(/images/formations.jpg)`,
+                    ), url()`,
                 }}
-            ></div>
+            >
 
-            <div className="flex flex-col gap-4 max-w-7xl">
+            </div>
 
-                <h2 className="font-bold mt-10">NOS FORMATIONS AGRICOLES À DISTANCE</h2>
+            <div className="flex flex-col gap-4 max-w-7xl mb-10 rounded-xl ">
+
+                <h2 className="font-bold mt-10">NOS SERVICES OFFERT </h2>
                 <Swiper
                     slidesPerView={"auto"}
                     spaceBetween={10}
                     className="drink-card h-fit w-screen px-5 md:pt-6 custom-1480px:justify-center !-mx-6 items-center"
                 >
                     <SwiperSlide className='!w-fit'>
-                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-primary text-white border-transparent dark:bg-tertiary px-3 py-1 border-2 dark:border-secondary/60">
-                            <GiCow className="text-xl" />
-                            Élevage
+                        <label className="flex  text-gray-500 justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-primary text-white dark:border-transparent bg-tertiary px-3 py-1  dark:border-2 border-secondary/60">
+                            <GiTicket className="text-xl" />
+                            RESERVATION
                         </label>
                     </SwiperSlide>
 
                     <SwiperSlide className='!w-fit'>
-                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-white dark:bg-tertiary px-3 py-1 border-2 border-white dark:border-secondary/60">
-                            <GiPlantRoots className="text-xl" />
-                            Sol et cultures
-                        </label>
+                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full text-gray-500 dark:bg-white bg-tertiary px-3 py-1 border-2 dark:border-white border-secondary/60">
+                            <GiRoad className="text-xl" />
+                            VOYAGES 
+                            </label>
                     </SwiperSlide>
 
                     <SwiperSlide className='!w-fit'>
-                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-white dark:bg-tertiary px-3 py-1 border-2 border-white dark:border-secondary/60">
-                            <MdOutlineFactory className="text-xl" />
-                            Pilotage de l'entreprise
-                        </label>
+                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full text-gray-500 dark:bg-white bg-tertiary px-3 py-1 border-2 dark:border-white border-secondary/60">
+                            <GiBoxTrap className="text-xl" />
+                                LIVRAISON ET COLIES
+                                </label>
                     </SwiperSlide>
 
                     <SwiperSlide className='!w-fit'>
-                        <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-white dark:bg-tertiary px-3 py-1 border-2 border-white dark:border-secondary/60">
-                            <MdOutlinePerson3 className="text-xl" />
-                            Ressources humaines
+                        <label className="text-gray-500 flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full dark:bg-white bg-tertiary px-3 py-1 border-2 dark:border-white border-secondary/60">
+                            <GiBus className="text-xl" />
+                            LOGISTIQUE ET TRANSPORT
                         </label>
                     </SwiperSlide>
                 </Swiper>
-                <div className="flex flex-col md:flex-row gap-10 justify-center mt-5">
+                <div className="flex flex-col md:flex-row gap-10 justify-center mt-10">
                     {articles.map((article, key) => <ArticleCard key={key} article={article} />)}
                 </div>
             </div>

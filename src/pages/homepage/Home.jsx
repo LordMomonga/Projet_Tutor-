@@ -13,10 +13,12 @@ import { Bus } from '../../../public/Bus';
 import { ContactShadows, Environment, OrbitControls } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
+import { Moto } from '../../../public/Moto';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import  {Taxi} from '../../../public/Taxi';
-import {motion} from "framer-motion"
+import {motion} from "framer-motion";
+
 const Bos = () =>{
   const ref = useRef()
     
@@ -40,6 +42,31 @@ const Bos = () =>{
           </motion.mesh>
   )
 }
+
+const Mos = () =>{
+  const ref = useRef()
+    
+    useFrame((state, delta) =>{
+      ref.current.rotation.y += delta/2
+    
+    })
+  return(
+    <motion.mesh
+    initial={{ opacity:0, y: -20}}
+      animate={{ 
+        x:0,
+        y:-20,
+        opacity:1, }}
+      transition={{
+        type:"spring",
+        duration: 1.5}}
+    position={[1, 0, 0]} size ={[0.5, 0.5, 0.5]} ref={ref} scale={45} >
+          <Moto />
+
+          </motion.mesh>
+  )
+}
+
 const Toxi = () =>{
   const ref = useRef()
     useFrame((state, delta) =>{
@@ -73,14 +100,19 @@ const Home = () => {
   model:<Toxi />,
   description:"",
   Title:"Transport privée"
+},
+{
+  model:<Mos />,
+  description:"",
+  Title:"Livraison Rapide"
 }]
 
   useEffect(() =>{
-    if(slide > 1){  
+    if(slide > 2){  
       setSlide(0)
     }
     if(slide < 0){
-      setSlide(1)
+      setSlide(2)
     }
   })
     const { t, i18n } = useTranslation();
@@ -116,7 +148,7 @@ const Home = () => {
       ><TbArrowLeft /></div>
       <div className='bg-tertiary px-2 py-1 text-white rounded-xl cursor-pointer'
        onClick={() => {
-        if(slide < 1)
+        if(slide < 2)
         setSlide(slide + 1)
         else setSlide(0)
        }}> <TbArrowRight /></div>
