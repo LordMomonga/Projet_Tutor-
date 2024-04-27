@@ -10,8 +10,20 @@
   scroll-behavior: smooth;
   
 }
-Canvas {
-height: 390px;
+
+
+@media screen and (min-width: 1400px) {
+  Canvas {
+    height: 390px;
+    margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 1400px) {
+  Canvas {
+    height: 30vh;
+    width: 40vh;
+    
+    }
 }
 
 body,
@@ -62,14 +74,14 @@ body {
   @apply inline-flex uppercase items-center px-6 py-3 font-bold text-white rounded-full outline-none cursor-pointer bg-gray-500 w-fit hover:bg-gray-600/90 border-b-4 border-t-0 border-gray-700 border-t-gray-500 active:border-b-0 active:border-t-4;
 }
 .input-field {
-  @apply relative border-[1px] border-white dark:border-none p-4 transition-all dark:shadow-none shadow-[-3px_-3px_7px_#ffffff_,_3px_3px_5px_#ceced1] focus:shadow-neomorphism font-medium rounded-full outline-none bg-light dark:bg-tertiary text-writing dark:text-white;
+  @apply relative dark:border-[1px] border-white border-none p-4 transition-all dark:shadow-none shadow-[-3px_-3px_7px_#ffffff_,_3px_3px_5px_#ceced1] focus:shadow-neomorphism font-medium rounded-full outline-none bg-tertiary md:bg-light md:dark:bg-tertiary text-writing dark:text-white;
 }
 
 .heroHeadText {
-  @apply font-black text-writing dark:text-white sm:text-[38px] xs:text-[34px] text-[30px] mt-2;
+  @apply font-black dark:text-writing text-white sm:text-[38px] xs:text-[34px] text-[30px] mt-2;
 }
 .heroSubText {
-  @apply text-writing/80 dark:text-[#dfd9ff] font-medium lg:text-[26px] sm:text-[23px] xs:text-[18px] text-[16px] lg:leading-[40px];
+  @apply dark:text-writing/80 text-[#dfd9ff] font-medium lg:text-[26px] sm:text-[23px] xs:text-[18px] text-[16px] lg:leading-[40px];
 }
 
 .sectionHeadText {

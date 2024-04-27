@@ -7,7 +7,7 @@ export default function Layout() {
         <div>
             <Topbar />
             <Navbar />
-            <main className='w-full flex justify-center mb-24'>
+            <main className='w-full flex justify-center mb-24 z-30'>
                 <Outlet />
             </main>
         </div>

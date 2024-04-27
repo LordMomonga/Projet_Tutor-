@@ -29,10 +29,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full z-30">
       <nav
         id="navbar"
-        className=" text-white fixed z-20 w-screen sm:w-fit justify-evenly flex items-center xs:gap-3 gap-2 dark:bg-white bg-tertiary px-4 py-2 md:px-2 md:py-2 dark:backdrop-blur-md rounded-t-3xl sm:rounded-full text-dark_primary border-2 dark:border-white border-secondary/30 duration-300 bottom-0 sm:bottom-10"
+        className=" text-white fixed z-30 w-screen sm:w-fit justify-evenly flex items-center xs:gap-3 gap-2 dark:bg-white bg-tertiary px-4 py-2 md:px-2 md:py-2 dark:backdrop-blur-md rounded-t-3xl sm:rounded-full text-dark_primary border-2 dark:border-white border-secondary/30 duration-300 bottom-0 sm:bottom-10"
       >
         {nav.map((item, key) => (
           <NavLink

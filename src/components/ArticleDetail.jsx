@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function ArticleDetail({ article, setVisible }) {
     return (
-        <div className="space-y-4 md:space-y-6 border-2 border-transparent dark:bg-white bg-transparent p-5 pb-16">
+        <div className="space-y-4 md:space-y-6 border-2 border-transparent dark:bg-white bg-transparent p-5  pb-16">
             <div className="relative overflow-hidden bg-cover bg-no-repeat bg-light w-fit m-auto rounded-2xl">
                 <img className="rounded-2xl" src={article.image} alt="" />
                 <NavLink to={`/food/${article._id}`}>

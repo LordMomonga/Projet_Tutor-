@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function AboutSection() {
     return (
         <>
-            <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-light bg-dark max-w-7xl">
+            <section className="overflow-hidden pt-20 px-2 md:px-0 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-light bg-dark max-w-7xl">
                 <div className="container mx-auto">
                     <div className=" px-8 flex flex-wrap items-center justify-between -mx-4">
                         <div className="w-full px-4 lg:w-6/12">

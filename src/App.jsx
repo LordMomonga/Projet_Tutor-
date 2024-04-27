@@ -9,6 +9,8 @@ import Login from './pages/Login';
 import Formations from './pages/Formations';
 import Sign from './pages/signUp';
 import MainDash from './pages/dashboard/mainDash';
+import Part from './pages/dashboard/part';
+import Car from './pages/dashboard/car';
 export const ThemeContext = createContext("light");
 
 function App() {
@@ -42,9 +44,12 @@ function App() {
               <Route path="/Formations" element={<Formations />} />
 
 
-
+              
             </Route>
-            <Route path="/dash" element={<MainDash />} />
+            <Route element={<MainDash />}>
+              <Route   path="/dash"  element={<Part />} />
+            </Route>
+            <Route   path="/map"  element={<Car />} />
 
           </Routes>
         </BrowserRouter>
