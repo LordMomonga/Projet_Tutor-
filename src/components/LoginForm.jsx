@@ -87,7 +87,7 @@ export default function LoginForm() {
                     type="email"
                     name="email"
                     placeholder="Email*"
-                    className={`${errors.email && "!border-red-500"} bg-gray-50 dark:bg-transparent dark:border border-secondary/40 focus:border-secondary outline-none text-white sm:text-sm rounded-lg block w-full p-2.5`}
+                    className={`${errors.email && "!border-red-500"} bg-gray-50 dark:bg-transparent dark:border border-secondary/40 focus:border-secondary outline-none text-black sm:text-sm rounded-lg block w-full p-2.5`}
                 />
                 <span className="text-red-500 text-sm">{errors.email && errors.email}</span>
             </div>
@@ -98,7 +98,7 @@ export default function LoginForm() {
                     type="password"
                     name="password"
                     placeholder="Au moins 6 caractères*"
-                    className={`${errors.password && "!border-red-500"} dark:bg-gray-50 bg-white  border-secondary/40 focus:border-secondary outline-none dark:text-white sm:text-sm rounded-lg block w-full p-2.5`}
+                    className={`${errors.password && "!border-red-500"} dark:bg-gray-50 bg-white  border-secondary/40 focus:border-secondary outline-none dark:text-black sm:text-sm rounded-lg block w-full p-2.5`}
                 />
                 <span className="text-red-500 text-sm">{errors.password && errors.password}</span>
             </div>
