@@ -2,12 +2,12 @@ export const articles = [
     {
         title: "Approvisionnement en Matériels Agricoles",
         description: "D&C fournit une large gamme de matériels industriels pour les agro-industries, garantissant des produits de qualité pour soutenir la production agricole",
-        image: "../public/images/outil.jpg"
+        image: "./images/outil.jpg"
     },
     {
         title:"commande et livraison rapide",
         description: "Nous développons des solutions sur mesure pour les besoins spécifiques des agro-industries, favorisant l'innovation et l'efficacité dans le secteur agricole.",
-        image: "../public/images/livraison.jpg"
+        image: "./images/livraison.jpg"
     },
     {
         title: "Services de Shipchandler",

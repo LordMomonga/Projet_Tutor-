@@ -26,7 +26,7 @@ export default function Formations() {
                     background: `linear-gradient(
                         to bottom, 
                         rgb(0 0 0 / .6), rgb(0 0 0 / 0)
-                    ), url("/images/champs.jpg")`,
+                    ), url("./images/champs.jpg")`,
                 }}
             >
 
