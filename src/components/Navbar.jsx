@@ -15,7 +15,7 @@ const Navbar = () => {
       icon: BiHomeAlt,
     },
     {
-      link: "/signin",
+      link: "/login",
       icon: TbLogin,
     },
     {
