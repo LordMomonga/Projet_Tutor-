@@ -26,7 +26,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 bg-white sm:text-center dark:text-gray-400 dark:bg-tertiary">© 2024 <a href="#" className="hover:underline">Silicon valley team</a>. All Rights D&C.</span>
+                <span className="block text-sm text-gray-500 bg-white sm:text-center dark:text-gray-400 dark:bg-tertiary">© 2024 <a href="#" className="hover:underline">D&C</a>. All Rights D&C.</span>
             </div>
         </footer>
 
