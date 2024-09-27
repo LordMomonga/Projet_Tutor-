@@ -11,6 +11,7 @@ import Sign from './pages/signUp';
 import MainDash from './pages/dashboard/mainDash';
 import Part from './pages/dashboard/part';
 import Car from './pages/dashboard/car';
+import Scan from './pages/Scan';
 export const ThemeContext = createContext("light");
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Sign />} />
-
+              <Route path="/scan" element={<Scan />} />
               <Route path="/Formations" element={<Formations />} />
 
 
