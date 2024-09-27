@@ -12,7 +12,7 @@ export const articles = [
     {
         title: "Services de Shipchandler",
         description: "Notre service de shipchandler assure la fourniture et la logistique de matériel et de produits agricoles aux navires, facilitant ainsi le transport et l'approvisionnement.",
-        image: "../public/images/ship.jpg"
+        image: "./images/ship.jpg"
     },
   
     {
