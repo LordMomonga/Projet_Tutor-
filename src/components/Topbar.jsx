@@ -1,6 +1,6 @@
 import { TbPlant2 } from "react-icons/tb";
 import { TbBus } from "react-icons/tb";
-
+import LElogo from "./logoDC.jpeg";
 import { BiChevronDown, BiMoon, BiSun } from "react-icons/bi";
 import { useState, useEffect, useContext, useRef } from "react";
 import { ThemeContext } from "../App";
@@ -51,14 +51,14 @@ const Topbar = () => {
   return (
     <div className="flex justify-center w-full">
       <div className={`h-16 fixed top-0 z-40 ${scrollClass} flex justify-between items-center px-3 md:px-6 w-screen`}>
-        <NavLink to="/" className="font-bold flex items-center gap-2 dark:bg-[#f7f7f7]/90 bg-dark/80 border-2 dark:border-white text-gray-400 border-transparent rounded-xl py-1 px-3">
-          <TbBus className="text-2xl bg-primary/30 h-7 w-7 rounded-full p-1" />
-          <h1 className="hidden xxs:block tracking-widest">Mov</h1>
+        <NavLink to="/" className="font-bold flex items-center gap-2 dark:bg-transparent  border-2 dark:border-white text-gray-400 border-transparent rounded-xl py-1 px-3">
+          <img src={LElogo} alt="" className="h-10 w-10  rounded-md shadow-md shadow-gray-500" />
+          <h1 className="hidden xxs:block tracking-widest text-red-700">D&C</h1>
         </NavLink>
 
         <div className="flex items-center gap-3">
           <div className="relative" onClick={() => { selectLang.current?.classList.toggle("hidden"); }}>
-            <button className="capitalize text-xs leading-5 font-semibold dark:bg-[#f7f7f7]/90 bg-dark/80 border-2 border-white dark:border-transparent rounded-xl py-2 px-3 flex items-center space-x-2 hover:shadow-card dark:highlight-white/5">
+            <button className="capitalize text-xs leading-5 font-semibold dark:bg-[#f7f7f7]/90  border-2 border-white dark:border-transparent rounded-xl py-2 px-3 flex items-center space-x-2 hover:shadow-card dark:highlight-white/5">
               {lang === "en" ? <img src={fr} className="h-5" alt="fr" /> : <img src={en} className="h-5" alt="en" />}
               <BiChevronDown size={20} />
             </button>

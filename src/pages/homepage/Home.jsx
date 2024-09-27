@@ -9,14 +9,14 @@ import { useScrollTo } from '../../components/useScrollTo';
 import { TbArrowLeft } from 'react-icons/tb';
 import { TbArrowRight } from 'react-icons/tb';
 import { Canvas } from '@react-three/fiber';
-import { Bus } from '../../../public/Bus';
+import { BUSs } from '../../../public/BUSs';
 import { ContactShadows, Environment, OrbitControls } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import { Moto } from '../../../public/Moto';
+import { Cruise } from '../../../public/Cruise';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import  {Taxi} from '../../../public/Taxi';
+import  {Usine} from '../../../public/Usine';
 import {motion} from "framer-motion";
 
 const Bos = () =>{
@@ -37,7 +37,7 @@ const Bos = () =>{
         type:"spring",
         duration: 1.5}}
     position={[1, 0, 0]} size ={[0.5, 0.5, 0.5]} ref={ref} >
-          <Bus />
+          <BUSs />
 
           </motion.mesh>
   )
@@ -61,7 +61,7 @@ const Mos = () =>{
         type:"spring",
         duration: 1.5}}
     position={[1, 0, 0]} size ={[0.5, 0.5, 0.5]} ref={ref} scale={45} >
-          <Moto />
+          <Cruise />
 
           </motion.mesh>
   )
@@ -70,7 +70,7 @@ const Mos = () =>{
 const Toxi = () =>{
   const ref = useRef()
     useFrame((state, delta) =>{
-      ref.current.rotation.y += delta/2
+      ref.current.rotation.y += delta/10
     
     })
   return(
@@ -84,7 +84,7 @@ const Toxi = () =>{
 
         duration: 0.8}}
     position={[1, -15, 0]} size ={[10, 10, 10]} scale={40} ref={ref} >
-          <Taxi />
+          <Usine />
 
           </motion.mesh>
   )
@@ -95,16 +95,16 @@ const Home = () => {
   const models = [{
     model:<Bos />,
     description:"",
-    Title:"Transport public"
+    Title:"Commande et Livraison "
 }, {
   model:<Toxi />,
   description:"",
-  Title:"Transport privée"
+  Title:"Service Agro-Industriel "
 },
 {
   model:<Mos />,
   description:"",
-  Title:"Livraison Rapide"
+  Title:" Shipchandle"
 }]
 
   useEffect(() =>{
@@ -158,10 +158,10 @@ const Home = () => {
       initial={{ opacity:0, y: -20}}
       animate={{ opacity:1, y: 0}}
       transition={{duration: 0.8}}
-      className='bold'> {models[slide].Title} <span className=' text-xl md:text-2xl text-primary'>personnalisé</span> </motion.h1> 
+      className='bold'> {models[slide].Title} <span className=' text-xl md:text-2xl text-red-700 font-bold'>personnalisé</span> </motion.h1> 
       </div>
 
-      <p className="text-md md:text-4xl  text-tertiary text-gray-600 font-bold tracking-widest absolute top-[15%] z-10 left-[30%] ">BIENVENUE CHEZ <span className='text-xl md:text-5xl text-primary'>MOV</span> </p>
+      <p className="text-md md:text-4xl  text-tertiary font-bold tracking-widest absolute top-[15%] z-10 left-[30%] ">BIENVENUE CHEZ <span className='text-xl md:text-5xl text-red-700'>D&C</span> </p>
 
       </div>
       
@@ -175,18 +175,21 @@ const Home = () => {
             <div className="w-full px-7 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
                 <h2 className="mb-5 text-3xl font-bold dark:text-dark text-white sm:text-[40px]/[48px]">
-                  TRANSFORMER VOTRE EXPERIENCE DE TRANSPORT               
+                TRANSFORMEZ VOTRE EXPÉRIENCE AGRICOLE ET INDUSTRIELLE             
                   </h2>
                 <p className='text-gray-500 mb-5 md:mb-0 md:px-0 px-1'>
-En tant que pionier de la digitalisation dans le domaine du transport, nous nous engageons a fournir des solutions innovantes, fiables et adaptéés aux besoins de nos 
-client.Avec notre application, transformez votre maniere de concevoir et de gerer le transport, pour un avenir plus efficace              </p>
+                Chez D&C, pionniers dans l'agriculture et le développement industriel, 
+                nous nous engageons à fournir des solutions innovantes et adaptées aux besoins de nos clients. 
+                Grâce à notre expertise, nous facilitons l'approvisionnement des agro-industries et offrons des services sur 
+                mesure pour optimiser la gestion des matières premières, avec une efficacité accrue. Ensemble, concevons un
+                 avenir durable et performant pour votre activité agricole et industrielle.            </p>
               </div>
             </div>
             <div className="w-full mt-5 px-5 lg:w-6/12">
               <div className=" mb-10 md:mb-5 flex flex-col gap-4 md:flex-row justify-center items-center">
               {articles.filter((_element, index) => index < 2).map((article, key) => <ArticleCard key={key} article={article} />)}
 </div>
-              <NavLink to="/formations" className="btn-secondary m-auto mt-8 text-white ">
+              <NavLink to="/formations" className="bg-blue-500 px-5 py-2 rounded-md shadow-sm shadow-white m-auto mt-8 text-white ">
                 Affichez plus →
               </NavLink>
             </div>

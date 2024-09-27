@@ -108,7 +108,7 @@ export default function LoginForm() {
                     J’ai oublier mon <a href="#" className="text-secondary font-medium hover:underline">mot de passe</a>
                 </span>
             </div>
-            <NavLink to="/dash">  <button
+              <button
                 className="btn bg-primary !w-full !justify-center mb-5"
                 type="submit"
                 disabled={isLoading}
@@ -118,7 +118,7 @@ export default function LoginForm() {
                 </> : <>
                     Se connecter
                 </>}
-            </button></NavLink>
+            </button>
             {/* <p className="text-sm font-light text-gray-500 text-center border-t-2 pt-6 border-gray-500">
                 Je suis nouveau, je veux {" "}
                 <NavLink to="/register" className="text-secondary font-semibold hover:underline">créer un compte pour mon restaurant.</NavLink>

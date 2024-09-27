@@ -26,7 +26,7 @@ export default function Formations() {
                     background: `linear-gradient(
                         to bottom, 
                         rgb(0 0 0 / .6), rgb(0 0 0 / 0)
-                    ), url()`,
+                    ), url("../../public/images/champs.jpg")`,
                 }}
             >
 
@@ -41,16 +41,16 @@ export default function Formations() {
                     className="drink-card h-fit w-screen px-5 md:pt-6 custom-1480px:justify-center !-mx-6 items-center"
                 >
                     <SwiperSlide className='!w-fit'>
-                        <label className="flex  text-gray-500 justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-primary text-white dark:border-transparent bg-tertiary px-3 py-1  dark:border-2 border-secondary/60">
+                        <label className="flex   justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full bg-primary text-white dark:border-transparent bg-tertiary px-3 py-1  dark:border-2 border-secondary/60">
                             <GiTicket className="text-xl" />
-                            RESERVATION
+                            Approvisionnement
                         </label>
                     </SwiperSlide>
 
                     <SwiperSlide className='!w-fit'>
                         <label className="flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full text-gray-500 dark:bg-white bg-tertiary px-3 py-1 border-2 dark:border-white border-secondary/60">
                             <GiRoad className="text-xl" />
-                            VOYAGES 
+                            industrie 
                             </label>
                     </SwiperSlide>
 
@@ -64,7 +64,7 @@ export default function Formations() {
                     <SwiperSlide className='!w-fit'>
                         <label className="text-gray-500 flex justify-center items-center gap-2 uppercase whitespace-nowrap rounded-full dark:bg-white bg-tertiary px-3 py-1 border-2 dark:border-white border-secondary/60">
                             <GiBus className="text-xl" />
-                            LOGISTIQUE ET TRANSPORT
+                            shipchandle
                         </label>
                     </SwiperSlide>
                 </Swiper>

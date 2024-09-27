@@ -2,16 +2,29 @@ import { useState } from "react";
 import { BiChevronLeft } from "react-icons/bi";
 import ArticleDetail from "./ArticleDetail"
 import ModalScreen from "./ModalScreen";
-
+import { motion } from "framer-motion";
 export default function ArticleCard(props) {
     const { article } = props;
     const [visible, setVisible] = useState(false);
+    const [isExiting, setIsExiting] = useState(false); 
+     
+    
 
     return (
-        <div className="w-[90vw] text-left z-10 sm:w-60 block shadow-card dark:shadow-none rounded-2xl dark:bg-white bg-tertiary">
-            <div className="relative overflow-hidden bg-cover bg-no-repeat bg-light rounded-2xl">
+        <motion.div
+        initial={{ opacity:0, y: -20}}
+        animate={{ 
+          x:-20,
+          y:0,
+          opacity:1, }}
+        transition={{
+          type:"spring",
+          duration: 2}}
+          // Adjust the duration as needed// Adjust the duration as needed
+        className="w-[90vw] text-left z-10 sm:w-70  block shadow-card dark:shadow-none rounded-2xl dark:bg-white bg-tertiary">
+            <div className="relative overflow-hidden bg-cover bg-no-repeat bg-light rounded-2xl ">
                 <img
-                    className="rounded-2xl"
+                    className="rounded-2xl "
                     src={article.image}
                     alt=""
                 />
@@ -27,7 +40,9 @@ export default function ArticleCard(props) {
                 <p className="mb-4 text-lg line-clamp-2 text-gray-500">{article.description}</p>
                 <div className="flex justify-between items-center">
                     <h5 className="font-medium leading-tight">
-                        <a onClick={() => setVisible(true)} href="#" className="text-primary hover:underline">Voir plus →</a>
+                    <span onClick={(e) => {
+                        e.preventDefault()
+                        setVisible(true)}}  className="text-primary hover:underline">Voir plus →</span>
                     </h5>
                    
                 </div>
@@ -40,7 +55,7 @@ export default function ArticleCard(props) {
                             <div
                                 onClick={(e) => {
                                     e.stopPropagation();
-                                    setVisible(false);
+                                    setVisible(false); // Close the modal and trigger exit animation
                                 }}
                                 className="mr-5 btn-secondary !py-0 !px-2"
                             >
@@ -53,7 +68,8 @@ export default function ArticleCard(props) {
                         </div>
                     </div>
                 </ModalScreen>
+           
             )}
-        </div>
+        </motion.div>
     );
 }

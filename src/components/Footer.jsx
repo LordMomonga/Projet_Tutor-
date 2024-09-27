@@ -1,13 +1,14 @@
 import { TbPlant2 } from "react-icons/tb";
 import { TbBus } from "react-icons/tb";
+import Logo from "./logoDC.jpeg"
 export default function Footer() {
     return (
         <footer className="bg-gray-50 rounded-lg shadow  m-4 mt-28 md:w-full md:-mb-24">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" className="text-primary flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                        <TbBus className="text-3xl text-gray-500 bg-primary/30 h-10 w-10 rounded-full p-2" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white tracking-widest">MovZen</span>
+                    <a href="#" className="text-red-700 flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                       <img src={Logo} alt="" className="h-10 w-10 rounded-md shadow-md shadow-gray-500"/>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white tracking-widest">D&C</span>
                     </a>
                     <ul className="flex flex-wrap items-center md:justify-start justify-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                         <li>
@@ -25,7 +26,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 bg-white sm:text-center dark:text-gray-400 dark:bg-tertiary">© 2024 <a href="#" className="hover:underline">Silicon valley team</a>. All Rights Reserved.</span>
+                <span className="block text-sm text-gray-500 bg-white sm:text-center dark:text-gray-400 dark:bg-tertiary">© 2024 <a href="#" className="hover:underline">Silicon valley team</a>. All Rights D&C.</span>
             </div>
         </footer>
 
