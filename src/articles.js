@@ -18,7 +18,7 @@ export const articles = [
     {
         title: "suivi et Support Technique",
         description: "D&C propose des services de maintenance et de support technique pour garantir que vos équipements agricoles fonctionnent de manière optimale.",
-        image: "../public/images/jardin.jpg"
+        image: "./images/jardin.jpg"
     },
 ]
 export const tools = [
